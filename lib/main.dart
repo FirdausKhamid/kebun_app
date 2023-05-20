@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:kebun_app/authentication/login.dart';
 import 'package:kebun_app/screens/activity/activity_screen.dart';
 import 'package:kebun_app/screens/assets/assets_screen.dart';
 import 'package:kebun_app/screens/employee/employee_screen.dart';
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         //textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyWidget(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -48,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final accentColor = const Color(0xffffffff);
   final backgroundColor = const Color(0xffffffff);
   final errorColor = const Color(0xffEF4444);
-  int currentIndex = 0;
+  int currentIndex = 2;
 
   final screen = [
     Employee(),

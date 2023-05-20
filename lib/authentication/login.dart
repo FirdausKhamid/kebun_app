@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:kebun_app/main.dart';
 
 import '../screens/yield/yield_screen.dart';
 import 'register_screen.dart';
@@ -78,10 +79,9 @@ class _MyWidgetState extends State<MyWidget> {
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Yield()),
-                    );
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (context) =>
+                            const MyHomePage(title: 'SawitCare')));
                   },
                 ),
               ),
