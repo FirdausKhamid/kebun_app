@@ -7,16 +7,25 @@ class StatusCard extends StatelessWidget {
   final String subtitle;
   final Function() onPressed;
 
-  const StatusCard(
+  var data;
+  bool isButtonEnabled = true;
+  Function update;
+
+  StatusCard(
       {required this.text,
+      required this.data,
       required this.color_status,
       required this.subtitle,
       required this.onPressed,
+      required this.update,
       Key? key})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    if (data[text[text.length - 1]]['accuracy'] == 0) {
+      isButtonEnabled = false;
+    }
     return GestureDetector(
       onTap: onPressed,
       child: Container(
@@ -39,6 +48,7 @@ class StatusCard extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
+            // test git
             Container(
               width: 30,
               height: 30,
@@ -59,25 +69,34 @@ class StatusCard extends StatelessWidget {
                   fontSize: 20),
             ),
             ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.grey,
-                  elevation: 0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32.0),
-                  ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 20, 20, 20),
+                elevation: 0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(32.0),
                 ),
-                onPressed:
-                    // Call this in a function
-                    () => showDialog<Dialog>(
+              ),
+              onPressed: isButtonEnabled
+                  ? () {
+                      showDialog<Dialog>(
                         context: context,
-                        builder: (BuildContext context) =>
-                            DialogFb1(text: this.text)),
-                child: Text('Update',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                    )))
+                        builder: (BuildContext context) => DialogFb1(
+                          text: this.text,
+                          data: this.data,
+                          update: this.update,
+                        ),
+                      );
+                    }
+                  : null, // Set onPressed to null when the button should be disabled
+              child: Text(
+                'Update',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            )
           ],
         ),
       ),

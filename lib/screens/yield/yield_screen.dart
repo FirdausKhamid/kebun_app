@@ -89,7 +89,7 @@ class _YieldState extends State<Yield> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
+            padding: const EdgeInsets.fromLTRB(30, 5, 30, 10),
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
@@ -153,7 +153,7 @@ class _YieldState extends State<Yield> {
             ),
           ),
           SizedBox(
-            height: 500,
+            height: 200,
             child: GridView(
               // Make a 2 column grid
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -162,35 +162,19 @@ class _YieldState extends State<Yield> {
               // Generate 100 widgets that display their index in the List
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.fromLTRB(30, 0, 0, 70),
                   child: PriceCard(
-                      text: "Fertization",
-                      imageUrl: "assets/login_palm_oil.png",
-                      subtitle: "RM3/kg",
+                      text: "Suggestion",
+                      imageUrl: "assets/suggestion.png",
+                      subtitle: "",
                       onPressed: () {}),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.fromLTRB(10, 0, 30, 70),
                   child: PriceCard(
-                      text: "Employee",
-                      imageUrl: "assets/login_palm_oil.png",
-                      subtitle: "RM0.40/kg",
-                      onPressed: () {}),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: PriceCard(
-                      text: "Fruit Maturity",
-                      imageUrl: "assets/login_palm_oil.png",
-                      subtitle: "RM3/kg",
-                      onPressed: () {}),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: PriceCard(
-                      text: "",
-                      imageUrl: "assets/login_palm_oil.png",
-                      subtitle: "RM0.40/kg",
+                      text: "Cheque Record",
+                      imageUrl: "assets/check.png",
+                      subtitle: "",
                       onPressed: () {}),
                 ),
               ],

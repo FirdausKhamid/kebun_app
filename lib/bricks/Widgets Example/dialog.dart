@@ -3,13 +3,17 @@ import 'package:flutter/material.dart';
 
 class DialogFb1 extends StatelessWidget {
   final String text;
+  Function update;
+  var data;
 
   Future<void> updateData(block) async {
     final ref = FirebaseDatabase.instance.ref();
     await ref.child('Grading/' + block).update({'accuracy': 0});
   }
 
-  DialogFb1({Key? key, required this.text}) : super(key: key);
+  DialogFb1(
+      {Key? key, required this.text, required this.data, required this.update})
+      : super(key: key);
   final primaryColor = Colors.green[900];
   final accentColor = const Color(0xffffffff);
 
@@ -56,6 +60,8 @@ class DialogFb1 extends StatelessWidget {
                     text: "Yes",
                     onPressed: () {
                       var block = (text[text.length - 1]);
+                      this.data[block]['accuracy'] = 0;
+                      this.update(data);
                       updateData(block);
                       Navigator.pop(context); // Close the dialog
                     }),

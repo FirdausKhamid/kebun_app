@@ -39,6 +39,21 @@ class Activity extends StatelessWidget {
         child: Center(
             child: ListView(
           children: [
+            InkWell(
+              child: Padding(
+                padding: const EdgeInsets.all(12),
+                child: ImageCard(
+                  text: 'Harvest',
+                  imageUrl: 'assets/harvest_activity.png',
+                ),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Harvest()),
+                );
+              },
+            ),
             Padding(
               padding: const EdgeInsets.all(12),
               child: ImageCard(
@@ -74,21 +89,6 @@ class Activity extends StatelessWidget {
                   imageUrl: 'assets/roadfix_activity.png',
                 ),
               ),
-            ),
-            InkWell(
-              child: Padding(
-                padding: const EdgeInsets.all(12),
-                child: ImageCard(
-                  text: 'Harvest',
-                  imageUrl: 'assets/harvest_activity.png',
-                ),
-              ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Harvest()),
-                );
-              },
             ),
           ],
         )),

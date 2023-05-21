@@ -56,7 +56,7 @@ class Employee extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(
                         left: 15, right: 15, top: 10, bottom: 10),
-                    child: AddButton(text: "Loans", onPressed: () {}),
+                    child: AddButton(text: "Track Loans", onPressed: () {}),
                   ),
                   Divider(
                     color: Colors.white,
@@ -86,63 +86,87 @@ class Employee extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white,
                     ),
-                    child: DataTable(
-                      columns: [
-                        DataColumn(label: Text('Name')),
-                        DataColumn(label: Text('Type')),
-                        DataColumn(label: Text('DateTime')),
-                        DataColumn(label: Text('Block')),
-                      ],
-                      rows: [
-                        DataRow(cells: [
-                          DataCell(Text('Item 1')),
-                          DataCell(Text('Type 1')),
-                          DataCell(Text('2023-05-20')),
-                          DataCell(Text('Block 1')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Text('Item 2')),
-                          DataCell(Text('Type 2')),
-                          DataCell(Text('2023-05-21')),
-                          DataCell(Text('Block 2')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Text('Item 2')),
-                          DataCell(Text('Type 2')),
-                          DataCell(Text('2023-05-21')),
-                          DataCell(Text('Block 2')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Text('Item 2')),
-                          DataCell(Text('Type 2')),
-                          DataCell(Text('2023-05-21')),
-                          DataCell(Text('Block 2')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Text('Item 2')),
-                          DataCell(Text('Type 2')),
-                          DataCell(Text('2023-05-21')),
-                          DataCell(Text('Block 2')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Text('Item 2')),
-                          DataCell(Text('Type 2')),
-                          DataCell(Text('2023-05-21')),
-                          DataCell(Text('Block 2')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Text('Item 2')),
-                          DataCell(Text('Type 2')),
-                          DataCell(Text('2023-05-21')),
-                          DataCell(Text('Block 2')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Text('Item 2')),
-                          DataCell(Text('Type 2')),
-                          DataCell(Text('2023-05-21')),
-                          DataCell(Text('Block 2')),
-                        ]),
-                      ],
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      child: DataTable(
+                        columnSpacing: 46,
+                        columns: [
+                          DataColumn(
+                              label: Text(
+                            'Name',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 12),
+                          )),
+                          DataColumn(
+                              label: Text(
+                            'Type',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 12),
+                          )),
+                          DataColumn(
+                              label: Text(
+                            'DateTime',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 12),
+                          )),
+                          DataColumn(
+                              label: Text(
+                            'Block',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 12),
+                          )),
+                        ],
+                        rows: [
+                          DataRow(cells: [
+                            DataCell(Text('Armand')),
+                            DataCell(Text('Harvest')),
+                            DataCell(Text('20.5.2023')),
+                            DataCell(Text('A')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('Firdaus')),
+                            DataCell(Text('Fixing')),
+                            DataCell(Text('19.5.2023')),
+                            DataCell(Text('B')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('Danial')),
+                            DataCell(Text('Pruning')),
+                            DataCell(Text('18.5.2023')),
+                            DataCell(Text('B')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('Ikmal')),
+                            DataCell(Text('Fertilize')),
+                            DataCell(Text('18.5.2023')),
+                            DataCell(Text('C')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('Haziq')),
+                            DataCell(Text('Harvest')),
+                            DataCell(Text('15.5.2023')),
+                            DataCell(Text('C')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('Farhan')),
+                            DataCell(Text('Pruning')),
+                            DataCell(Text('14.5.2023')),
+                            DataCell(Text('D')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('Hasliza')),
+                            DataCell(Text('Fertilize')),
+                            DataCell(Text('13.5.2023')),
+                            DataCell(Text('A')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('Ainul')),
+                            DataCell(Text('Fixing')),
+                            DataCell(Text('12.5.2023')),
+                            DataCell(Text('C')),
+                          ]),
+                        ],
+                      ),
                     ),
                   )),
             ),

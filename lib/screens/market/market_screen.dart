@@ -48,6 +48,7 @@ class _MarketState extends State<Market> {
           title: const Text(
             "Marketplace",
             style: TextStyle(
+              fontWeight: FontWeight.bold,
               color: Colors.white,
               fontSize: 25,
             ),

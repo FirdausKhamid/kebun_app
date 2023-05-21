@@ -40,6 +40,7 @@ class MyBarGraph extends StatelessWidget {
           showTitles: false,
         )),
         rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+        leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
       ),
       barGroups: myBarData.barData
           .map(

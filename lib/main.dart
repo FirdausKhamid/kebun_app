@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Employee(),
     Activity(),
     Yield(),
-    Assets(),
+    // Assets(),
     Market(),
   ];
 
@@ -94,11 +94,11 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: Icon(Icons.bar_chart_rounded),
               backgroundColor: primaryColor,
             ),
-            BottomNavigationBarItem(
-              label: "Assets",
-              icon: Icon(Icons.house_rounded),
-              backgroundColor: primaryColor,
-            ),
+            // BottomNavigationBarItem(
+            //   label: "Assets",
+            //   icon: Icon(Icons.house_rounded),
+            //   backgroundColor: primaryColor,
+            // ),
             BottomNavigationBarItem(
               label: "Market",
               icon: Icon(Icons.shopping_cart_rounded),
