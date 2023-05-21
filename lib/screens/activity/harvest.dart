@@ -70,7 +70,7 @@ class _HarvestState extends State<Harvest> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Padding(
-                          padding: EdgeInsets.only(right: 65),
+                          padding: EdgeInsets.only(right: 57),
                           child: Text(
                             'Harvest  Activity',
                             style: TextStyle(
