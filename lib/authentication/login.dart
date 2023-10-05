@@ -73,6 +73,12 @@ class _MyWidgetState extends State<MyWidget> {
                 height: 50,
                 width: 300,
                 child: ElevatedButton(
+                  //color
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.green[900],
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                  ),
                   child: const Text(
                     'Login',
                     style: TextStyle(
